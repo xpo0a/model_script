@@ -1,3 +1,4 @@
+### if you only have model parames not include model.
 import torch
 
 PATH = 'your own path'  # only model dict
@@ -8,3 +9,12 @@ for i in model['params']:
   sum += model['params'][i].numel()
 
 print(sum/1e6)  # M
+
+### if you can import model and inference it
+'''
+you can use *torch-summary, torchstat, thop, torchstat*
+I encounter a question.
+def forward(x, weight): # in FMEBN
+  pass
+How to cal the params
+'''
