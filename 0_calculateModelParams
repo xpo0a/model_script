@@ -1,0 +1,10 @@
+import torch
+
+PATH = 'your own path'  # only model dict
+
+model = torch.load(PATH)
+sum = 0
+for i in model['params']:
+  sum += model['params'][i].numel()
+
+print(sum/1e6)  # M
